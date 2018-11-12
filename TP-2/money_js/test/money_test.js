@@ -35,3 +35,16 @@ QUnit.test("test equals", function(assert)
 	assert.ok(!m1EUR.equals(m10eur),"1 EUR diff de 10 eur");
 }
 );
+
+QUnit.test("test currency", function(assert)
+    {
+        assert.expect(2);
+        var m=new money(1,"EUR");
+        //assert.ok(m.getCurrency().length===3,"valeur = 1");
+        assert.equal(m.getCurrency().length,3);
+
+        var m2=new money(1,"EURO");
+        //assert.ok(m.getCurrency().length===3,"valeur = 1");
+        assert.ok(m2.getCurrency().length>3);
+    }
+);

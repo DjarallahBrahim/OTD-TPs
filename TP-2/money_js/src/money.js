@@ -8,10 +8,10 @@ var money= (function(){
 		return this.curr;
 	}
 	money.prototype.getValue=function () {
-		return this.curr;
+		return this.v;
 	}
 	money.prototype.equals=function (otherM) {
-		return (otherM.getValue()==this.getValue()) ;
+		return (otherM.getValue()===this.getValue() && otherM.getCurrency().toUpperCase()===this.getCurrency().toUpperCase()) ;
 	}
 	money.prototype.toString=function toString() {
 		return this.getValue()+" ("+this.getCurrency()+")" ;
