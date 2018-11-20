@@ -168,9 +168,7 @@ QUnit.test("Alert_OPERATION", function(assert)
         var fixture="";
         fixture+=("<div id='res'></div>");
 
-        window.alert = function (s) {
-                document.getElementById("res").innerText=s
-        };
+
 
         var fixtureNode=document.getElementById("qunit-fixture");
         fixtureNode.innerHTML=fixture;
@@ -180,6 +178,9 @@ QUnit.test("Alert_OPERATION", function(assert)
 
         c.displayResult(document.getElementById('res'));
 
-        assert.equal(document.getElementById("res").style.color,"rgb(13, 255, 88)");
+        window.alert = function (){
+            document.getElementById("res").innerText="Alert"
+        };
+        assert.equal(document.getElementById("res"),"Alert");
     }
 );

@@ -14,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="calc.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="calc.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/calc.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="48" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
+            <state relative-caret-position="165">
+              <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -50,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="calc_test.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="calc_test.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/calc_test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="165" column="17" selection-start-line="165" selection-start-column="17" selection-end-line="165" selection-end-column="17" />
+            <state relative-caret-position="478">
+              <caret line="180" column="35" selection-start-line="180" selection-start-column="35" selection-end-line="180" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -77,8 +77,8 @@
         <option value="$PROJECT_DIR$/src/money_ops.js" />
         <option value="$PROJECT_DIR$/test/money_ops_test.js" />
         <option value="$PROJECT_DIR$/src/Fabric.js" />
-        <option value="$PROJECT_DIR$/src/calc.js" />
         <option value="$PROJECT_DIR$/test/calc_test.js" />
+        <option value="$PROJECT_DIR$/src/calc.js" />
       </list>
     </option>
   </component>
@@ -91,7 +91,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="47" />
     <option name="y" value="24" />
     <option name="width" value="660" />
@@ -156,18 +156,18 @@
       <updated>1542017510395</updated>
       <workItem from="1542017514702" duration="5046000" />
       <workItem from="1542661529895" duration="1533000" />
-      <workItem from="1542707860635" duration="3407000" />
+      <workItem from="1542707860635" duration="5124000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9986000" />
+    <option name="totallyTimeSpent" value="11703000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="47" y="24" width="660" height="744" extended-state="4" />
+    <frame x="47" y="-4" width="1319" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.36212122" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.36212122" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -362,10 +362,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/calc.js">
+    <entry file="file://$PROJECT_DIR$/src/money_exc.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="48" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
+        <state>
+          <caret column="9" selection-start-column="9" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -376,17 +376,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/money_exc.js">
+    <entry file="file://$PROJECT_DIR$/test/calc_test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="9" selection-start-column="9" selection-end-column="9" />
+        <state relative-caret-position="478">
+          <caret line="180" column="35" selection-start-line="180" selection-start-column="35" selection-end-line="180" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/calc_test.js">
+    <entry file="file://$PROJECT_DIR$/src/calc.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="165" column="17" selection-start-line="165" selection-start-column="17" selection-end-line="165" selection-end-column="17" />
+        <state relative-caret-position="165">
+          <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
         </state>
       </provider>
     </entry>

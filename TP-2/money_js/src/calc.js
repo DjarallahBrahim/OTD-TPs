@@ -6,6 +6,7 @@ calc.prototype.displayResult=function (resultDiv) {
             if(!this.message.includes("Result")){
                 document.getElementById('res').style.color = 'rgb(255, 0, 0)';
                 resultDiv.innerHTML=this.message;
+                alert(this.message);
             }
             else{
                 document.getElementById('res').style.color = 'rgb(13, 255, 88)';
@@ -32,11 +33,10 @@ calc.prototype.computeResult=function (form) {
                 }
                 else {
                     this.message="Unsupported operation "+ops+"";
-                    alert(this.message);
                 }
             }catch (e) {
                 this.message=e.toString();
-                alert(this.message);
+
             }
 	};
 
