@@ -3,7 +3,14 @@ function calc() {
 }
 
 calc.prototype.displayResult=function (resultDiv) {
-            resultDiv.innerHTML="Result : "+this.message;
+            if(!this.message.includes("Result")){
+                document.getElementById('res').style.color = 'rgb(255, 0, 0)';
+                resultDiv.innerHTML=this.message;
+            }
+            else{
+                document.getElementById('res').style.color = 'rgb(13, 255, 88)';
+                resultDiv.innerHTML=this.message;
+            }
 };
 
 calc.prototype.computeResult=function (form) {
@@ -19,13 +26,17 @@ calc.prototype.computeResult=function (form) {
                     res=MoneyOps.add(m1,m2);
                     this.message="Result : "+(res.toString())+"";
 
-                } else {
+                }else if (ops==="SUB") {
+                    res=MoneyOps.sub(m1,m2);
+                    this.message="Result : "+(res.toString())+"";
+                }
+                else {
                     this.message="Unsupported operation "+ops+"";
-
+                    alert(this.message);
                 }
             }catch (e) {
                 this.message=e.toString();
-
+                alert(this.message);
             }
 	};
 
