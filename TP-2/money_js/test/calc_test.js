@@ -116,7 +116,7 @@ QUnit.test("OPERATION_incompatibles_SUB", function(assert)
         fixture+=("<input type='text' id='c1' name='c1' value='EU'/>");
         fixture+=("<input type='text' id='v2' name='v2' value='2'/>");
         fixture+=("<input type='text' id='c2' name='c2' value='DA'/>");
-        fixture+=("<input type='text' id='ops' name='ops' value='MUL'/>");
+        fixture+=("<input type='text' id='ops' name='ops' value='DIV'/>");
         fixture+=("</form>");
 
 
@@ -125,7 +125,7 @@ QUnit.test("OPERATION_incompatibles_SUB", function(assert)
 
         var c=new calc();
         c.computeResult(document.getElementById('form0'));
-        assert.equal(c.message,"Unsupported operation MUL");
+        assert.equal(c.message,"Unsupported operation DIV");
     }
 );
 
@@ -160,27 +160,5 @@ QUnit.test("GREEN_STATUS_FOR_OK_OPERATION", function(assert)
         console.log(document.getElementById("res"));
         c.displayResult(document.getElementById('res'));
         assert.equal(document.getElementById("res").style.color,"rgb(13, 255, 88)");
-    }
-);
-
-QUnit.test("Alert_OPERATION", function(assert)
-    {
-        var fixture="";
-        fixture+=("<div id='res'></div>");
-
-
-
-        var fixtureNode=document.getElementById("qunit-fixture");
-        fixtureNode.innerHTML=fixture;
-
-        var c=new calc();
-        c.message="Result ...";
-
-        c.displayResult(document.getElementById('res'));
-
-        window.alert = function (){
-            document.getElementById("res").innerText="Alert"
-        };
-        assert.equal(document.getElementById("res"),"Alert");
     }
 );

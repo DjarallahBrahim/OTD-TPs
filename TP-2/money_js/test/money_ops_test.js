@@ -54,3 +54,24 @@ QUnit.test("test simple soustraction diff currency", function(assert)
 
     }
 );
+
+QUnit.test("test simple multiplication", function(assert)
+    {
+        assert.expect(2);
+        var m1=new money(6,"EUR");
+        var m2=new money(2,"EUR");
+        var m3=new money(3,"EUR");
+
+        assert.ok(m1.equals(MoneyOps.multiplication(m3,m2)),"1e = 3e+2e");
+        assert.deepEqual(m1,MoneyOps.multiplication(m3,m2),"1e = 3e+2e deepEqual");
+    }
+);
+
+QUnit.test("test simple multiplication diff currency", function(assert)
+    {
+        var m2=new money(3,"EUR");
+        var m3=new money(2,"EU");
+        assert.throws(function(assert) {var m1=MoneyOps.multiplication(m3,m2)}, DevisesIncompatibleExc, "Devises Incompatibles");
+
+    }
+);
