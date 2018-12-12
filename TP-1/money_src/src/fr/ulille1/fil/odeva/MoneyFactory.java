@@ -21,6 +21,7 @@ public class MoneyFactory {
     _defaultCurrencies=new HashMap<String,Float>();
 		_defaultCurrencies.put("EUR",new Float(1.));
 		_defaultCurrencies.put("CHF",new Float(1/1.2));
+    _defaultCurrencies.put("DZ",new Float(1/1.3));
 
     _defaultInstance = new MoneyFactory();
   }
@@ -40,6 +41,8 @@ public class MoneyFactory {
 
   public Money createMoney(int value, String currency) throws UnexistingCurrencyException
   {
+    if (!_defaultCurrencies.containsKey(currency))
+      throw new UnexistingCurrencyException(currency);
     return new Money(value,currency);
   }
 

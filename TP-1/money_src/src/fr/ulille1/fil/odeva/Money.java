@@ -86,11 +86,11 @@ public class Money {
 		if (getClass() != object.getClass())
 			return false;
 		Money seconde = (Money) object;
-		if (currency == null && seconde.currency != null) {
+		if (null == getCurrency() && seconde.getCurrency() != null) {
 			return false;
-		} else if (!currency.toUpperCase().equals(seconde.currency.toUpperCase()))
+		} else if (!this.getCurrency().toUpperCase().equals(seconde.getCurrency().toUpperCase()))
 			return false;
-		if (value != seconde.value)
+		if (seconde.getValue() != this.getValue())
 			return false;
 		return true;
 	}

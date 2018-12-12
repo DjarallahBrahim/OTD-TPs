@@ -21,9 +21,45 @@ public class MoneyEqualsTestCase{
      * Equals
      */
     @Test
-    public void sameValueSameDevis()  throws UnexistingCurrencyException {
+    public void sameValueSameDevise()  throws UnexistingCurrencyException {
         f12EUR=mf.createMoney(14, "EUR");
         f14EUR=mf.createMoney(14, "EUR");
         assertTrue(f12EUR.equals(f14EUR));
+    }
+
+    @Test
+    public void SameValueSameDevise() throws UnexistingCurrencyException
+    {
+        Money f12EUR = mf.createMoney(12, "EUR");
+        Money f_12EUR = mf.createMoney(12, "EUR");
+
+        assertTrue(f12EUR.equals(f_12EUR));
+    }
+
+    @Test
+    public void DiffValueDiffDevise() throws UnexistingCurrencyException
+    {
+        Money f12EUR = mf.createMoney(12, "EUR");
+        Money f14CHF = mf.createMoney(14, "CHF");
+
+        assertTrue(!f12EUR.equals(f14CHF));
+    }
+
+    @Test
+    public void DiffValueSameDevise() throws UnexistingCurrencyException
+    {
+        Money f12EUR = mf.createMoney(12, "EUR");
+        Money f14EUR = mf.createMoney(14, "EUR");
+
+        assertTrue(!f12EUR.equals(f14EUR));
+    }
+
+    @Test
+    public void SameValueDiffDevise() throws UnexistingCurrencyException
+    {
+        Money f12EUR = mf.createMoney(12, "EUR");
+        Money f12CHF = mf.createMoney(12, "CHF");
+
+        assertTrue(!f12EUR.equals(f12CHF));
     }
 }
