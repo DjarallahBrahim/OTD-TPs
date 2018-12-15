@@ -1,9 +1,9 @@
-QUnit.module("calc", {
+module("calc", {
 //	setup:function(){alert("setup moneyOps individual test");},
 //	teardown:function(){alert("teardown moneyOps individual test");}
 });
 
-QUnit.test("test_computeresults", function(assert)
+test("test_computeresults", function(assert)
 {
         var fixture="";
         fixture+=("<form id='form0'>");
@@ -21,12 +21,12 @@ QUnit.test("test_computeresults", function(assert)
 
         var c=new calc();
         c.computeResult(document.getElementById('form0'));
-        assert.equal(c.message,"Result : 4 (EU)");
+        equal(c.message,"Result : 4 (EU)");
 }
 );
 
 
-QUnit.test("test_computeresults_other", function(assert)
+test("test_computeresults_other", function(assert)
 {
         var fixture="";
         fixture+=("<div id='res'></div>");
@@ -44,11 +44,11 @@ QUnit.test("test_computeresults_other", function(assert)
 
         var c=new calc();
         c.computeResult(document.getElementById('form0'));
-        assert.equal(c.message,"Result : 0 (EU)");
+        equal(c.message,"Result : 0 (EU)");
 }
 );
 
-QUnit.test("test_displayResult", function(assert)
+test("test_displayResult", function(assert)
 {
         var fixture="";
         fixture+=("<div id='res'></div>");
@@ -59,11 +59,11 @@ QUnit.test("test_displayResult", function(assert)
         var c=new calc();
         c.message="Result : 4 (EU)";
         c.displayResult(document.getElementById('res'));
-        assert.equal(document.getElementById('res').innerHTML,"Result : 4 (EU)");
+        equal(document.getElementById('res').innerHTML,"Result : 4 (EU)");
 }
 );
 
-QUnit.test("Devises_incompatibles_ADD", function(assert)
+test("Devises_incompatibles_ADD", function(assert)
     {
         var fixture="";
         fixture+=("<div id='res'></div>");
@@ -81,11 +81,11 @@ QUnit.test("Devises_incompatibles_ADD", function(assert)
 
         var c=new calc();
         c.computeResult(document.getElementById('form0'));
-        assert.equal(c.message,"Devises incompatibles : EU vs DA");
+        equal(c.message,"Devises incompatibles : EU vs DA");
     }
 );
 
-QUnit.test("Devises_incompatibles_SUB", function(assert)
+test("Devises_incompatibles_SUB", function(assert)
     {
         var fixture="";
         fixture+=("<div id='res'></div>");
@@ -103,11 +103,11 @@ QUnit.test("Devises_incompatibles_SUB", function(assert)
 
         var c=new calc();
         c.computeResult(document.getElementById('form0'));
-        assert.equal(c.message,"Devises incompatibles : EU vs DA");
+        equal(c.message,"Devises incompatibles : EU vs DA");
     }
 );
 
-QUnit.test("OPERATION_incompatibles_SUB", function(assert)
+test("OPERATION_incompatibles_SUB", function(assert)
     {
         var fixture="";
         fixture+=("<div id='res'></div>");
@@ -125,11 +125,11 @@ QUnit.test("OPERATION_incompatibles_SUB", function(assert)
 
         var c=new calc();
         c.computeResult(document.getElementById('form0'));
-        assert.equal(c.message,"Unsupported operation DIV");
+        equal(c.message,"Unsupported operation DIV");
     }
 );
 
-QUnit.test("RED_STATUS_FOR_NO_OK_OPERATION", function(assert)
+test("RED_STATUS_FOR_NO_OK_OPERATION", function(assert)
     {
         var fixture="";
         fixture+=("<div id='res'></div>");
@@ -142,11 +142,11 @@ QUnit.test("RED_STATUS_FOR_NO_OK_OPERATION", function(assert)
 
         console.log(document.getElementById("res"));
         c.displayResult(document.getElementById('res'));
-        assert.equal(document.getElementById("res").style.color,"rgb(255, 0, 0)");
+        equal(document.getElementById("res").style.color,"rgb(255, 0, 0)");
     }
 );
 
-QUnit.test("GREEN_STATUS_FOR_OK_OPERATION", function(assert)
+test("GREEN_STATUS_FOR_OK_OPERATION", function(assert)
     {
         var fixture="";
         fixture+=("<div id='res'></div>");
@@ -159,52 +159,6 @@ QUnit.test("GREEN_STATUS_FOR_OK_OPERATION", function(assert)
 
         console.log(document.getElementById("res"));
         c.displayResult(document.getElementById('res'));
-        assert.equal(document.getElementById("res").style.color,"rgb(13, 255, 88)");
-    }
-);
-
-
-
-// QUnit.test("test_doComputation", function(assert)
-//     {
-//         var forme="";
-//         forme+=("<form id='form0'>");
-//         forme+=("</form>");
-//         var res="";
-//         res+=("<form id='form0'>");
-//         res+=("</form>");
-//
-//
-//         var fixtureNode=document.getElementById("qunit-fixture");
-//         fixtureNode.innerHTML=res;
-//         fixtureNode.innerHTML=forme;
-//
-//         doComputation(forme,res);
-//         var c=new calc();
-//         c.computeResult(document.getElementById('form0'));
-//         assert.equal(c.message,"Result : 4 (EU)");
-//
-//     }
-// );
-
-QUnit.test("test_computeresults_MUL", function(assert)
-    {
-        var fixture="";
-        fixture+=("<div id='res'></div>");
-        fixture+=("<form id='form0'>");
-        fixture+=("<input type='text' id='v1' name='v1' value='2'/>");
-        fixture+=("<input type='text' id='c1' name='c1' value='EU'/>");
-        fixture+=("<input type='text' id='v2' name='v2' value='2'/>");
-        fixture+=("<input type='text' id='c2' name='c2' value='EU'/>");
-        fixture+=("<input type='text' id='ops' name='ops' value='MUL'/>");
-        fixture+=("</form>");
-
-
-        var fixtureNode=document.getElementById("qunit-fixture");
-        fixtureNode.innerHTML=fixture;
-
-        var c=new calc();
-        c.computeResult(document.getElementById('form0'));
-        assert.equal(c.message,"Result : 4 (EU)");
+        equal(document.getElementById("res").style.color,"rgb(13, 255, 88)");
     }
 );

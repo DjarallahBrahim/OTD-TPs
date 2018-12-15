@@ -18,12 +18,13 @@ QUnit.test("Alert_OPERATION", function(assert)
 
         var c=new calc();
         c.message="Result ...";
-
-        window.alert = function (){
+        var old_confirm=window.confirm;
+        window.confirm = function (){
             document.getElementById("res").innerText="Alert"
         };
 
         c.displayResult(document.getElementById('res'));
         assert.equal(document.getElementById("res").innerText,"Alert");
+        window.confirm = old_confirm;
     }
 );

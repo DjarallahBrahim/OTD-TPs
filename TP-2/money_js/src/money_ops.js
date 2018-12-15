@@ -17,3 +17,11 @@ MoneyOps.sub = function(m1,m2){
 
     return new money(m1.getValue()-m2.getValue(),m1.getCurrency());
 };
+
+
+MoneyOps.multiplication = function(m1,m2){
+    if(m1.getCurrency().toUpperCase() !== m2.getCurrency().toUpperCase())
+        throw new DevisesIncompatibleExc(m1.getCurrency().toUpperCase() , m2.getCurrency().toUpperCase());
+
+    return new money(m1.getValue()*m2.getValue(),m1.getCurrency());
+};

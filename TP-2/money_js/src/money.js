@@ -13,7 +13,7 @@ var money= (function(){
 	money.prototype.equals=function (otherM) {
 		return (otherM.getValue()===this.getValue() && otherM.getCurrency().toUpperCase()===this.getCurrency().toUpperCase()) ;
 	}
-	money.prototype.toString=function toString() {
+	money.prototype.toString=function () {
 		return this.getValue()+" ("+this.getCurrency()+")" ;
 	}
 

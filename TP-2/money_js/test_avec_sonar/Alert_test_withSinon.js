@@ -1,4 +1,4 @@
-QUnit.test("Alert_OPERATION", function(assert)
+test("Alert_OPERATION_with_Sinon", function(assert)
     {
         var fixture="";
         fixture+=("<div id='res'></div>");
@@ -12,10 +12,9 @@ QUnit.test("Alert_OPERATION", function(assert)
         c.message="Result ...";
 
 
-        sinon.spy(window,"confirm");
-
+        var r = sinon.stub(window, "alert", function(msg) { return false; } );
         c.displayResult(document.getElementById('res'));
-        assert.ok(window.confirm.calledOnce);
-        window.confirm.restore();
+        ok(r.calledOnce);
+        r.restore();
     }
 );
